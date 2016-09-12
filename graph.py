@@ -1,6 +1,5 @@
 import sqlite3,re,string
 
-attrs = lambda x: ';'+';'.join([key+':'+value for key,value in x.iteritems()])+';'
 def rem_dupes_dict(d):
 	out = []
 	for item in d:
@@ -101,21 +100,6 @@ class Graph():
 		con.close()
 		return [{'id':item[0],'start':item[1],'end':item[2],'label':item[3],'properties':item[4],'directed':item[5]} for item in result]
 
-		"""
-		def query handle:
-			split spaces:
-				['match','(a:label)--[edge]--(b:label)']
-				if match:
-					query[1] split -
-						['(a:label)','','[edge]','','(b:label)']
-							find all nodes with :label
-								find all edges attached to 'a' with :edge
-									find all nodes attached to :edge with :label
-					ret dict
-				if return:
-					ret dict
-		"""
-
 	def get_edges_by_label_end(self,node_id,label):
 		con = sqlite3.connect(self.file)
 		c = con.cursor()
@@ -151,7 +135,7 @@ class Graph():
 		for edge in edges:
 			if edge['directed'] == 1:
 				out.append(edge)
-		
+
 	def variable_parse(self,nodes,edge,inp):
 		a = [[],[],[]]
 		o = {'node_1_var': '', 'edge_var': '', 'node_2_var': ''}
