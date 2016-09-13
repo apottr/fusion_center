@@ -55,7 +55,7 @@ two = db.create_node([":Person"],{'name_first':'Jane','name_last':'Doe'})
 edge = db.create_edge(one,two,':Married')
 ```
 ## `Graph.cypher(query)`
-**Note: Cypher is not fully implemented. What is described here in the example is the extent of the query functionality.**
+**Note: Cypher is not fully implemented. What is described here in the example is the extent of the query functionality.**  
 Arguments:
 - String `query`
   - Multi-line query string.
