@@ -9,6 +9,7 @@ Arguments:
 Initializes a Graph at the path `filename`.  
 Returns:
 - Graph object
+
 ### Sample Usage
 ```python
 db = Graph('graph.db')
@@ -24,6 +25,7 @@ Arguments:
 Adds a node to the graph with the labels defined with `labels` and the properties defined with `properties`.  
 Returns:
 - Node ID
+
 ### Sample Usage
 ```python
 one = db.create_node([":Person"],{'name_first':'John','name_last':'Doe'})
@@ -44,6 +46,7 @@ Adds an edge to the graph with the starting and ending nodes (defined with `star
 Directed edges allow you to restrict movement along the edge to a single direction.  
 Returns:
 - Edge ID
+
 ### Sample Usage
 ```python
 one = db.create_node([":Person"],{'name_first':'John','name_last':'Doe'})
@@ -60,6 +63,7 @@ Arguments:
 Allows the user to execute a simple [Cypher](https://neo4j.com/docs/developer-manual/current/cypher/) query.  
 Returns:
 - Array of resulting nodes or edges in Dict form.
+
 ### Sample Usage
 ```python
 db.cypher('''
