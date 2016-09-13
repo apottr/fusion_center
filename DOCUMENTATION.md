@@ -3,8 +3,8 @@
 
 ## `Graph(filename)`
 Arguments:
-	- String `filename`
-		Path for initialization
+- String `filename`
+  - Path for initialization
 
 Initializes a Graph at the path `filename`.
 Returns:
@@ -16,10 +16,10 @@ db = Graph('graph.db')
 
 ## `Graph.create_node(labels,properties)`
 Arguments:
-	- Array `labels`
-		- Contains short Strings of labels
-	- Dict `properties`
-		- Contains key:value pairs of the node properties.
+- Array `labels`
+  - Contains short Strings of labels
+- Dict `properties`
+  - Contains key:value pairs of the node properties.
 Adds a node to the graph with the labels defined with `labels` and the properties defined with `properties`
 Returns:
 	Node ID
