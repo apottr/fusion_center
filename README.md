@@ -1,4 +1,4 @@
-### Fusion Center
+# Fusion Center
 ===
 
 ## What this is
