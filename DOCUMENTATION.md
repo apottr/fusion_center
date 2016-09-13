@@ -30,14 +30,14 @@ one = db.create_node([":Person"],{'name_first':'John','name_last':'Doe'})
 
 ## `Graph.create_edge(start,end,label,[directed=True])`
 Arguments:
-	- Integer `start`
-		- ID of the starting node
-	- Integer `end`
-		- ID of the ending node
-	- String `label`
-		- Label of the edge
-	- Optional Boolean argument `directed`
-		- If the edge should work in only from start to end.
+- Integer `start`
+  - ID of the starting node
+- Integer `end`
+  - ID of the ending node
+- String `label`
+  - Label of the edge
+- Optional Boolean argument `directed`
+  - If the edge should work in only from start to end.
 Adds an edge to the graph with the starting and ending nodes (defined with `start` and `end`), labeled with `label`.
 Directed edges allow you to restrict movement along the edge to a single direction.
 Returns:
