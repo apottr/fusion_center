@@ -180,7 +180,13 @@ class Graph():
 
 
 	def handle_match(self,query,more):
-		m = re.match(r'\((?P<variable_name>[A-z]+):(?P<labels>[A-z]+)\)(?P<directed_one>.)\-\[?(?P<edge_variable_name>[A-z]+):(?P<edge_label>[A-z]+)\]\-(?P<directed_two>.)\((?P<var_2>[A-z]+):(?P<lab_2>[A-z]+)\)',query)
+		expr = [
+			r'\((?P<variable_name>[A-z]+):(?P<labels>[A-z]+)\)(?P<directed_one>.)\-\[?(?P<edge_variable_name>[A-z]+):(?P<edge_label>[A-z]+)\]\-(?P<directed_two>.)\((?P<var_2>[A-z]+):(?P<lab_2>[A-z]+)\)',
+			r'\((?P<variable_name>[A-z]+)\)',
+			r'\(\)',
+
+		]
+		m = re.match(expr[0],query)
 		node_1 = {'var': m.group('variable_name'), 'label': m.group('labels')}
 		edge = {'var': m.group('edge_variable_name'), 'label': m.group('edge_label')}
 		node_2 = {'var': m.group('var_2'), 'label': m.group('lab_2')}
